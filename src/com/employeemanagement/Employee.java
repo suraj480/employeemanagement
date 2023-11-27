@@ -4,24 +4,22 @@ public class Employee {
 private int id;
 private String name;
 private int age;
-private String designation;
-private String department;
-
 private double salary;
-public Employee(int id, String name, int age, String designation, String department, double salary) {
+public Employee(int id, String name, int age, String department, String designation, double salary) {
 	super();
 	this.id = id;
 	this.name = name;
 	this.age = age;
-	this.designation = designation;
-	this.department=department;
 	this.salary = salary;
-	
+	this.designation = designation;
+	this.department = department;
 }
+private String designation;
+private String department;
 @Override
 public String toString() {
-	return "Employee [id=" + id + ", name=" + name + ", age=" + age + ", designation=" + designation +", department=" + department + ", salary="
-			+ salary + "]";
+	return "Employee [id=" + id + ", name=" + name + ", age=" + age + ", salary=" + salary + ", designation="
+			+ designation + ", department=" + department + "]";
 }
 public int getId() {
 	return id;
@@ -41,6 +39,12 @@ public int getAge() {
 public void setAge(int age) {
 	this.age = age;
 }
+public Double getSalary() {
+	return salary;
+}
+public void setSalary(Double salary) {
+	this.salary = salary;
+}
 public String getDesignation() {
 	return designation;
 }
@@ -52,12 +56,6 @@ public String getDepartment() {
 }
 public void setDepartment(String department) {
 	this.department = department;
-}
-public double getSalary() {
-	return salary;
-}
-public void setSalary(double salary) {
-	this.salary = salary;
 }
 
 }
